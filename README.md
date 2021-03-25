@@ -25,5 +25,4 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![](parstagram.gif)
-
+<img src='http://parstagram.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />

@@ -23,7 +23,7 @@ class CameraViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
-         let post = PFObject(className: "Post")
+         let post = PFObject(className: "Posts")
          post["caption"] = commentField.text!
          post["author"] = PFUser.current()
          
@@ -49,9 +49,9 @@ class CameraViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         picker.allowsEditing = true
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-        picker.sourceType = .photoLibrary
-    } else {
         picker.sourceType = .camera
+    } else {
+        picker.sourceType = .photoLibrary
         
     }
         

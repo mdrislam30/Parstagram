@@ -16,15 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let parseConfig = ParseClientConfiguration {
-                    $0.applicationId = "Y1o99Q1z2FFFLecvwWMKNB1AjlxZBJKOGIYCZ8Uo" // <- UPDATE
+            
+            $0.applicationId = "Y1o99Q1z2FFFLecvwWMKNB1AjlxZBJKOGIYCZ8Uo" // <- UPDATE
                     $0.clientKey = "RXETfBXhkREJ5OvlAWXFkMWeXIzsRN3DVQbXP5XY" // <- UPDATE
                     $0.server = "https://parseapi.back4app.com"
+            
+//                    $0.applicationId = "Y1o99Q1z2FFFLecvwWMKNB1AjlxZBJKOGIYCZ8Uo" // <- UPDATE
+//                    $0.clientKey = "RXETfBXhkREJ5OvlAWXFkMWeXIzsRN3DVQbXP5XY" // <- UPDATE
+//                    $0.server = "https://parseapi.back4app.com"
+            
             }
             Parse.initialize(with: parseConfig)
             
             // --- end copy
 
-
+//        if PFUser.current() != nil {
+//            let main = UIStoryboard(name: "Main", bundle: nil)
+//            let feedNavigationController = main.instantiateViewController(identifier: "FeedNavigationController")
+//            //window?.rootViewController = feedNavigationController
+//            window?.rootViewController = feedNavigationController
+//        }
             return true
         }
 
